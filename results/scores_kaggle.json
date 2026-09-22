@@ -1,0 +1,32 @@
+{
+  "_description": "Scores Kaggle (F1) recopiés tels quels depuis la présentation de soutenance (PDF de 19 pages, non redistribué) et depuis le code. Aucun score n'a été recalculé : les soumissions et les poids ne sont pas publiés.",
+  "_metrique": "F1 sur le jeu de test Kaggle. La présentation (page 2) parle de F1 micro ; le code de validation interne (yasmina/train.py, sample_f1_from_ranked_hits) calcule un F1 par relevé moyenné sur les relevés.",
+  "progression": [
+    {"etape": "Modèle de départ (Adrian)", "score": 0.200, "source": "yasmina/train.py, docstring : « l'original d'Adrian (0.200 public) »"},
+    {"etape": "V1 : ensemble 5 plis", "score": 0.22793, "source": "présentation, page 7"},
+    {"etape": "Pré-entraînement PO (5 époques, 7 variables)", "score": 0.233, "source": "présentation, page 10"},
+    {"etape": "Ensemble V1 + V6 (10 modèles)", "score": 0.23389, "source": "présentation, page 11"}
+  ],
+  "ablations_pre_entrainement_po": [
+    {"variante": "5 époques", "score": 0.233, "source": "présentation, page 10"},
+    {"variante": "15 époques", "score": 0.175, "source": "présentation, page 10"},
+    {"variante": "7 variables auxiliaires", "score": 0.233, "source": "présentation, page 10"},
+    {"variante": "57 variables auxiliaires", "score": 0.226, "source": "présentation, page 10"}
+  ],
+  "classement_final": {
+    "source": "présentation, page 11 (capture du tableau Kaggle)",
+    "lignes": [
+      {"rang": null, "equipe": "Baseline participant random", "score": 0.21495, "soumissions": 1},
+      {"rang": 1, "equipe": "Groupe1 (notre équipe)", "score": 0.20227, "soumissions": 29},
+      {"rang": 2, "equipe": "Groupe 4", "score": 0.19235, "soumissions": 31},
+      {"rang": 3, "equipe": "Groupe 3", "score": 0.18840, "soumissions": 29},
+      {"rang": 4, "equipe": "Groupe 2", "score": 0.18813, "soumissions": 29}
+    ]
+  },
+  "validation_interne": {
+    "_attention": "Scores de validation spatiale internes (un pli), pas des scores Kaggle.",
+    "adrian_asym_globalnorm_clean_fold0": 0.3458580267765735,
+    "adrian_train_run": 0.34948104221918114,
+    "source": "results/validation/*.json"
+  }
+}

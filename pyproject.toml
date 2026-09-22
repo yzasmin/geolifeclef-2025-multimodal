@@ -1,0 +1,32 @@
+[project]
+name = "geolifeclef-2025-multimodal"
+version = "1.0.0"
+description = "Challenge Deep Learning MIASHS 2026 (données GeoLifeCLEF 2025) : prédiction multi-label d'espèces végétales à partir de données multimodales."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "torch>=2.4",
+    "torchvision>=0.19",
+    "numpy>=1.24",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+figures = ["matplotlib>=3.8"]
+
+[tool.uv]
+default-groups = ["dev", "figures"]
+package = false
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu" }]
+torchvision = [{ index = "pytorch-cpu" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

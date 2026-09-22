@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.venv_agent*/
+venv*/
+
+# Secrets
+.env
+.env.*
+!.env.example
+mcp.json
+.mcp_model_state.json
+
+# Données et sorties d'entraînement (jamais commitées)
+data/
+artifacts/
+artifacts_*/
+checkpoints/
+runs/
+.cache/
+*.pt
+*.pth
+*.pkl
+*.whl
+submission*.csv
+GLC25_*.csv
+
+# Système
+.DS_Store
+Thumbs.db

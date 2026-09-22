@@ -1,0 +1,66 @@
+============================= test session starts =============================
+
+platform win32 -- Python 3.10.11, pytest-9.1.1, pluggy-1.6.0 -- <racine du depot>\.venv\Scripts\python.exe
+
+rootdir: <racine du depot>
+
+configfile: pyproject.toml
+
+testpaths: tests
+
+collecting ... collected 6 items
+
+
+
+tests/test_smoke.py::test_dimensions_match_real_training_summaries PASSED
+
+tests/test_smoke.py::test_yasmina_model_forward[False] yasmina/model.py image=False -> sortie (2, 5016), 3,751,320 paramètres
+
+PASSED
+
+tests/test_smoke.py::test_yasmina_model_forward[True] yasmina/model.py image=True -> sortie (2, 5016), 14,710,184 paramètres
+
+PASSED
+
+tests/test_smoke.py::test_v6_model_forward[efficientnet_b3] Adrian/v6_package/model.py efficientnet_b3 -> sortie (2, 5016), 14,710,184 paramètres
+
+PASSED
+
+tests/test_smoke.py::test_v6_model_forward[resnet50] Adrian/v6_package/model.py resnet50 -> sortie (2, 5016), 27,590,296 paramètres
+
+PASSED
+
+tests/test_smoke.py::test_v6_model_forward[convnext_tiny] Adrian/v6_package/model.py convnext_tiny -> sortie (2, 5016), 31,932,281 paramètres
+
+PASSED
+
+
+
+============================== warnings summary ===============================
+
+tests/test_smoke.py::test_yasmina_model_forward[False]
+
+tests/test_smoke.py::test_yasmina_model_forward[True]
+
+  <racine du depot>\yasmina\model.py:123: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+
+    self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=n_layers)
+
+
+
+tests/test_smoke.py::test_v6_model_forward[efficientnet_b3]
+
+tests/test_smoke.py::test_v6_model_forward[resnet50]
+
+tests/test_smoke.py::test_v6_model_forward[convnext_tiny]
+
+  <racine du depot>\Adrian\v6_package\model.py:247: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+
+    self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=n_layers)
+
+
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+================== 6 passed, 5 warnings in 205.00s (0:03:24) ==================
+

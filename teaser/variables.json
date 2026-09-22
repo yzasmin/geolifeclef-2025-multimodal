@@ -1,0 +1,14 @@
+{
+  "projectNumber": "02",
+  "title": "Espèces végétales par satellite",
+  "category": "Deep learning multimodal",
+  "stack1": "PyTorch",
+  "stack2": "EfficientNet-B3",
+  "stack3": "Transformer",
+  "metricLabel": "Classement final (4 équipes)",
+  "metricValue": "1re",
+  "metric2Label": "F1 Kaggle, ensemble final",
+  "metric2Value": "0,23389",
+  "figureCaption": "F1 Kaggle par version, chiffres de la soutenance",
+  "accent": "#FF5C8F"
+}

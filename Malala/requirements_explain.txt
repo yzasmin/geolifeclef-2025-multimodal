@@ -1,0 +1,10 @@
+# Dependances pour explain_example.py
+# Installation : pip install -r requirements_explain.txt
+# PyTorch a installer separement avec la bonne version CUDA :
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+
+numpy
+matplotlib
+seaborn
+shap
+captum

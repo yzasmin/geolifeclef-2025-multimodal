@@ -1,0 +1,93 @@
+nohup: ignoring input
+=================================================================
+  PIPELINE FINAL - GeoLifeCLEF MIASHS 2026
+  Base : modèle collègue (0.20) + améliorations scientifiques
+=================================================================
+Device : cuda
+GPU    : NVIDIA GeForce RTX 2080 Ti
+[1/8] Chargement labels...
+       88987 surveys | 5016 espèces
+[2/8] Features tabulaires (log1p + z-score + suppression redondances)...
+       Features après suppression redondances : 59 (vs 64 avant)
+[3/8] Index séries temporelles...
+       Landsat : 88987 train | 14829 test
+       Bioclim : 88987 train | 14829 test
+[4/8] Calcul stats normalisation (z-score par bande/variable)...
+       Landsat mean par bande: ['15.0', '16.1', '7.9', '69.3', '48.5', '25.2']
+       Landsat std  par bande: ['11.6', '10.3', '9.6', '18.3', '13.1', '9.4']
+[5/8] Split Leave-Region-Out...
+       Train : 79816 surveys | régions : ['ATLANTIC', 'BLACK SEA', 'BOREAL', 'CONTINENTAL', 'PANNONIAN', 'STEPPIC']
+       Val   : 9171 surveys | régions : ['ALPINE', 'MEDITERRANEAN']
+       Médiane espèces/survey : 14
+       Espèces rares (<10)    : 3203
+       Espèces communes (>500): 381
+       Surveys test valides   : 14784
+       DataLoaders : train=79816 | val=9171 | test=14784
+[6/8] Construction du modèle...
+       Paramètres : 1,662,046
+[7/8] Entraînement (100 epochs max, patience=15)...
+-----------------------------------------------------------------
+Ep   1 | TrainL 0.0096 | ValL 0.0302 | F1 0.0390 (τ=0.26) | 87s
+  ✓ Sauvegardé (F1=0.0390, τ=0.26)
+Ep   2 | TrainL 0.0075 | ValL 0.0272 | F1 0.0534 (τ=0.29) | 87s
+  ✓ Sauvegardé (F1=0.0534, τ=0.29)
+Ep   3 | TrainL 0.0064 | ValL 0.0245 | F1 0.0630 (τ=0.28) | 76s
+  ✓ Sauvegardé (F1=0.0630, τ=0.28)
+Ep   4 | TrainL 0.0059 | ValL 0.0226 | F1 0.0734 (τ=0.32) | 78s
+  ✓ Sauvegardé (F1=0.0734, τ=0.32)
+Ep   5 | TrainL 0.0056 | ValL 0.0215 | F1 0.0841 (τ=0.31) | 74s
+  ✓ Sauvegardé (F1=0.0841, τ=0.31)
+Ep   6 | TrainL 0.0054 | ValL 0.0208 | F1 0.0965 (τ=0.35) | 88s
+  ✓ Sauvegardé (F1=0.0965, τ=0.35)
+Ep   7 | TrainL 0.0053 | ValL 0.0203 | F1 0.1054 (τ=0.34) | 78s
+  ✓ Sauvegardé (F1=0.1054, τ=0.34)
+Ep   8 | TrainL 0.0053 | ValL 0.0201 | F1 0.1123 (τ=0.34) | 85s
+  ✓ Sauvegardé (F1=0.1123, τ=0.34)
+Ep   9 | TrainL 0.0052 | ValL 0.0203 | F1 0.1178 (τ=0.38) | 74s
+  ✓ Sauvegardé (F1=0.1178, τ=0.38)
+Ep  10 | TrainL 0.0051 | ValL 0.0202 | F1 0.1163 (τ=0.36) | 81s
+Ep  11 | TrainL 0.0051 | ValL 0.0200 | F1 0.1204 (τ=0.37) | 75s
+  ✓ Sauvegardé (F1=0.1204, τ=0.37)
+Ep  12 | TrainL 0.0051 | ValL 0.0201 | F1 0.1225 (τ=0.38) | 88s
+  ✓ Sauvegardé (F1=0.1225, τ=0.38)
+Ep  13 | TrainL 0.0050 | ValL 0.0199 | F1 0.1255 (τ=0.36) | 73s
+  ✓ Sauvegardé (F1=0.1255, τ=0.36)
+Ep  14 | TrainL 0.0050 | ValL 0.0202 | F1 0.1252 (τ=0.38) | 79s
+Ep  15 | TrainL 0.0050 | ValL 0.0201 | F1 0.1273 (τ=0.39) | 83s
+  ✓ Sauvegardé (F1=0.1273, τ=0.39)
+Ep  16 | TrainL 0.0050 | ValL 0.0202 | F1 0.1284 (τ=0.40) | 74s
+  ✓ Sauvegardé (F1=0.1284, τ=0.40)
+Ep  17 | TrainL 0.0050 | ValL 0.0203 | F1 0.1275 (τ=0.40) | 78s
+Ep  18 | TrainL 0.0049 | ValL 0.0202 | F1 0.1299 (τ=0.40) | 88s
+  ✓ Sauvegardé (F1=0.1299, τ=0.40)
+Ep  19 | TrainL 0.0049 | ValL 0.0204 | F1 0.1307 (τ=0.41) | 79s
+  ✓ Sauvegardé (F1=0.1307, τ=0.41)
+Ep  20 | TrainL 0.0049 | ValL 0.0204 | F1 0.1312 (τ=0.40) | 88s
+  ✓ Sauvegardé (F1=0.1312, τ=0.40)
+Ep  21 | TrainL 0.0049 | ValL 0.0205 | F1 0.1326 (τ=0.41) | 75s
+  ✓ Sauvegardé (F1=0.1326, τ=0.41)
+Ep  22 | TrainL 0.0049 | ValL 0.0210 | F1 0.1279 (τ=0.43) | 82s
+Ep  23 | TrainL 0.0049 | ValL 0.0207 | F1 0.1301 (τ=0.42) | 77s
+Ep  24 | TrainL 0.0049 | ValL 0.0205 | F1 0.1355 (τ=0.40) | 73s
+  ✓ Sauvegardé (F1=0.1355, τ=0.40)
+Ep  25 | TrainL 0.0049 | ValL 0.0205 | F1 0.1337 (τ=0.41) | 75s
+Ep  26 | TrainL 0.0048 | ValL 0.0209 | F1 0.1350 (τ=0.41) | 80s
+Ep  27 | TrainL 0.0048 | ValL 0.0208 | F1 0.1337 (τ=0.42) | 74s
+Ep  28 | TrainL 0.0048 | ValL 0.0207 | F1 0.1353 (τ=0.42) | 78s
+Ep  29 | TrainL 0.0048 | ValL 0.0205 | F1 0.1359 (τ=0.39) | 76s
+  ✓ Sauvegardé (F1=0.1359, τ=0.39)
+Ep  30 | TrainL 0.0048 | ValL 0.0205 | F1 0.1335 (τ=0.39) | 76s
+Ep  31 | TrainL 0.0048 | ValL 0.0210 | F1 0.1350 (τ=0.41) | 77s
+Ep  32 | TrainL 0.0048 | ValL 0.0206 | F1 0.1377 (τ=0.40) | 74s
+  ✓ Sauvegardé (F1=0.1377, τ=0.40)
+Ep  33 | TrainL 0.0048 | ValL 0.0208 | F1 0.1366 (τ=0.43) | 73s
+Ep  34 | TrainL 0.0048 | ValL 0.0206 | F1 0.1348 (τ=0.41) | 73s
+Ep  35 | TrainL 0.0048 | ValL 0.0210 | F1 0.1340 (τ=0.42) | 73s
+Ep  36 | TrainL 0.0048 | ValL 0.0209 | F1 0.1322 (τ=0.41) | 73s
+Ep  37 | TrainL 0.0048 | ValL 0.0207 | F1 0.1363 (τ=0.42) | 76s
+Ep  38 | TrainL 0.0048 | ValL 0.0207 | F1 0.1368 (τ=0.39) | 74s
+Ep  39 | TrainL 0.0047 | ValL 0.0207 | F1 0.1347 (τ=0.41) | 73s
+Ep  40 | TrainL 0.0047 | ValL 0.0212 | F1 0.1340 (τ=0.43) | 73s
+Ep  41 | TrainL 0.0047 | ValL 0.0210 | F1 0.1347 (τ=0.40) | 73s
+Ep  42 | TrainL 0.0047 | ValL 0.0208 | F1 0.1349 (τ=0.41) | 74s
+Ep  43 | TrainL 0.0047 | ValL 0.0210 | F1 0.1342 (τ=0.40) | 73s
