@@ -1,5 +1,7 @@
 # GeoLifeCLEF 2025 multimodal : Challenge Deep Learning MIASHS 2026
 
+**Fiche détaillée du projet : <https://yzasmin.github.io/projets/challenge-kaggle/>** (portfolio de Yasmina Saoud)
+
 Prédire, pour un point GPS en Europe, **l'ensemble des espèces végétales présentes** à partir d'images satellite,
 de séries temporelles et de variables environnementales. Travail d'équipe réalisé en avril 2026 pour le
 Challenge Deep Learning du master MIASHS (compétition Kaggle interne sur les données GeoLifeCLEF 2025).
